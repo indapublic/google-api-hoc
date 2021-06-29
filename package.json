@@ -1,0 +1,19 @@
+{
+  "name": "google-api-hoc",
+  "version": "1.0.0",
+  "description": "Google API wrapper",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indapublic/google-api-hoc.git"
+  },
+  "author": "indapublic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indapublic/google-api-hoc/issues"
+  },
+  "homepage": "https://github.com/indapublic/google-api-hoc#readme"
+}
