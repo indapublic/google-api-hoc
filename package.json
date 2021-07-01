@@ -1,6 +1,6 @@
 {
 	"name": "google-api-hoc",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Google API wrapper",
 	"main": "dist/index.js",
 	"files": [

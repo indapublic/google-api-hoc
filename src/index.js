@@ -31,7 +31,7 @@ const defaultCreateCache = (options) => {
 
 const DefaultLoadingContainer = (props) => <div>Loading...</div>
 
-export const wrapper = (input) => (WrappedComponent) => {
+export const GoogleApiHoc = (input) => (WrappedComponent) => {
 	class Wrapper extends React.Component {
 		constructor(props, context) {
 			super(props, context)
@@ -131,5 +131,3 @@ export const wrapper = (input) => (WrappedComponent) => {
 
 	return Wrapper
 }
-
-export default wrapper
