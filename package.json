@@ -1,19 +1,49 @@
 {
-  "name": "google-api-hoc",
-  "version": "1.0.0",
-  "description": "Google API wrapper",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/indapublic/google-api-hoc.git"
-  },
-  "author": "indapublic",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/indapublic/google-api-hoc/issues"
-  },
-  "homepage": "https://github.com/indapublic/google-api-hoc#readme"
+	"name": "google-api-hoc",
+	"version": "1.0.1",
+	"description": "Google API wrapper",
+	"main": "dist/index.js",
+	"files": [
+		"dist",
+		"index.d.ts"
+	],
+	"types": "index.d.ts",
+	"scripts": {
+		"build": "NODE_ENV=production webpack --config webpack.config.js",
+		"dev": "NODE_ENV=development webpack --config webpack.config.js",
+		"watch": "NODE_ENV=development webpack --config webpack.config.js --watch",
+		"prepublish": "./scripts/prepublish.sh",
+		"preversion": ". ./scripts/prepublish.sh",
+		"wbuild": "NODE_ENV=production webpack",
+		"wpublish_pages": "gh-pages -d public/",
+		"lint": "eslint ./src",
+		"lintfix": "eslint ./src --fix",
+		"testonly": "NODE_ENV=test mocha $npm_package_options_mocha",
+		"test": "npm run lint && npm run testonly",
+		"test-watch": "npm run testonly -- --watch --watch-extensions js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/indapublic/google-api-hoc.git"
+	},
+	"author": "indapublic <mail@indapublic.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/indapublic/google-api-hoc/issues"
+	},
+	"homepage": "https://github.com/indapublic/google-api-hoc#readme",
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@babel/preset-env": "^7.14.7",
+		"@babel/preset-react": "^7.14.5",
+		"@types/googlemaps": "^3.43.3",
+		"@types/react": "^17.0.11",
+		"babel-loader": "^8.2.2",
+		"prettier": "^2.3.2",
+		"webpack": "^5.41.1",
+		"webpack-cli": "^4.7.2"
+	},
+	"dependencies": {
+		"react": "^17.0.2"
+	}
 }
